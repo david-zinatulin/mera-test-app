@@ -7,6 +7,7 @@ const DashboardPage = props => (
       <title>{props.title}</title>
     </Helmet>
     <div>
+      v2
       Dashboard
     </div>
   </article>
