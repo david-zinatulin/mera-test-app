@@ -7,6 +7,7 @@ import App from './components/App';
 
 const history = createBrowserHistory();
 const MOUNT_NODE = document.getElementById('app');
+//Test
 
 const render = () => {
   ReactDOM.render(
