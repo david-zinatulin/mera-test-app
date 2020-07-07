@@ -1,13 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
-const EXAMPLE_JSON = {
-  "var1": "value1",
-  "array": ["1", "2", "3"],
-  "object": {
-    "var2": "value2"
-  }
-}
+import data from "../assets/data";
 
 const DashboardPage = props => (
   <article>
@@ -15,8 +8,7 @@ const DashboardPage = props => (
       <title>{props.title}</title>
     </Helmet>
     <div>
-      Dashboard
-      <div>{JSON.stringify(EXAMPLE_JSON)}</div>
+      <code lang="javascript">{data.glossary.title}</code>
     </div>
   </article>
 )
