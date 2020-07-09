@@ -1,18 +1,21 @@
 import React, { useRef, useState } from 'react';
-import { element } from 'prop-types';
 
 const JsonNode = ({ value, element, index, length }) => {
+    const NODE_CLOSED_BUTTON_ICON = "+";
+    const NODE_OPENED_BUTTON_ICON = "-";
 
     const objectRef = useRef();
+
     const [isDisplayed, setIsDisplayed] = useState(true);
-    const [symbol, changeSymbol] = useState("-");
+    const [icon, changeIcon] = useState(NODE_OPENED_BUTTON_ICON);
+
     const toggleView = () => {
         if (isDisplayed) {
             objectRef.current.style.display = "none";
-            changeSymbol("+");
+            changeIcon(NODE_CLOSED_BUTTON_ICON);
         } else {
             objectRef.current.style.display = "";
-            changeSymbol("-");
+            changeIcon(NODE_OPENED_BUTTON_ICON);
         }
         setIsDisplayed(!isDisplayed);
     }
@@ -20,7 +23,7 @@ const JsonNode = ({ value, element, index, length }) => {
     return (
         <React.Fragment>
             <span style={{ color: "green" }}>{"\"" + element + "\""}</span>
-            <span>: <button onClick={toggleView}>{symbol}</button></span>
+            <span>: <button onClick={toggleView}>{icon}</button></span>
             <span ref={objectRef}>{value}</span>
         </React.Fragment>
     );
