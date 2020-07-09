@@ -29,7 +29,7 @@ const DisplayObject = ({ data }) => {
             case 'number':
                 return { style: "color: #24D616", value }
             case 'boolean':
-                return { style: "color: plum", value }
+                return { style: "color: #ff00ff", value }
             default:
                 if (Array.isArray(value)) {
                     console.log(value);
