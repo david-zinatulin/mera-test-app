@@ -2,6 +2,7 @@ import React from 'react';
 import JsonNode from "./JsonNode";
 import { random } from 'lodash';
 import DisplayArray from './DisplayArray';
+import css from "./DashboardPage.module.css";
 
 const DisplayObject = ({ data }) => {
 
@@ -9,16 +10,8 @@ const DisplayObject = ({ data }) => {
         const dataKeys = Object.keys(data);
         const dataValues = Object.values(data);
         const newArray = dataKeys.map((element, index) => {
-            const { style, value } = checkValueForStyle(dataValues[index]);
-            if (!React.isValidElement(value)) {
-                return {
-                    __html: "<span style=\"color: green\">\"" + element + "\"</span>" +
-                        "<span>: </span>" +
-                        "<span style=\"" + style + "\">" + value + "</span>" + (index === (dataKeys.length - 1) ? "" : "<span>,</span>")
-                }
-            } else {
-                return <JsonNode value={value} element={element} index={index} length={dataKeys.length} />
-            }
+            const { className, value, isObject } = checkValueForStyle(dataValues[index]);
+            return <JsonNode className={className} value={value} element={element} index={index} length={dataKeys.length} isObject={isObject} />
         });
         return newArray;
     }
@@ -26,34 +19,18 @@ const DisplayObject = ({ data }) => {
     const checkValueForStyle = (value) => {
         switch (typeof (value)) {
             case 'string':
-                return { style: "color: purple", value: "\"" + value + "\"" };
+                return { className: css.string, value: "\"" + value + "\"", isObject: false };
             case 'number':
-                return { style: "color: #24D616", value }
+                return { className: css.number, value, isObject: false }
             case 'boolean':
-                return { style: "color: #ff00ff", value }
+                return { className: css.boolean, value, isObject: false }
             default:
                 if (Array.isArray(value)) {
-
-                    console.log(value);
-                    return { style: "color: orange", value: <DisplayArray /> }
-
+                    return { className: css.array, value: <DisplayArray data={value} />, isObject: true }
                 } else if (typeof (value) === 'object') {
-                    return {
-                        style: "color: black", value: <DisplayObject data={value} />
-                    }
+                    return { className: css.object, value: <DisplayObject data={value} />, isObject: true }
                 }
         }
-    }
-
-    //TODO: Proper array displaying
-    const checkArrayForCode = (array) => {
-        const newArray = array.map((element, index) => {
-            const { style, value } = checkValueForStyle(element);
-            console.log("style: " + style + " , value: " + value);
-            return <JsonNode value={element} key={""} />
-        });
-        console.log(newArray);
-        return newArray;
     }
 
     const generateKey = (index) => {
@@ -63,13 +40,8 @@ const DisplayObject = ({ data }) => {
     const jsonArray = prepareJson(data);
 
     return jsonArray.map((elem, index) => {
-        let base;
+        const base = <div key={key} className={css.line}>{elem}</div>;
         let key = generateKey(index);
-        if (!React.isValidElement(elem)) {
-            base = <div key={key} style={{ marginLeft: 30 + "px" }} dangerouslySetInnerHTML={elem}></div>;
-        } else {
-            base = <div key={key} style={{ marginLeft: 30 + "px" }}>{elem}</div>;
-        }
         let array = [];
         if (jsonArray.length > 1) {
             let bracketKey = generateKey(index);

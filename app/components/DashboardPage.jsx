@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import data from "../assets/data";
 import DisplayObject from "./DisplayObject";
+import css from "./DashboardPage.module.css";
 
 const DashboardPage = props => (
   <article>
@@ -9,7 +10,7 @@ const DashboardPage = props => (
       <title>{props.title}</title>
     </Helmet>
     <div>
-      <code>
+      <code className={css.code}>
         <DisplayObject data={data} />
       </code>
     </div>

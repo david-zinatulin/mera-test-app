@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
+import css from "./DashboardPage.module.css";
+import { isObject } from 'lodash';
 
-const JsonNode = ({ value, element, index, length }) => {
+const JsonNode = ({ value, element, index, length, className, isObject }) => {
     let objectRef = useRef();
 
     const NODE_CLOSED_BUTTON_ICON = "+";
@@ -30,10 +32,10 @@ const JsonNode = ({ value, element, index, length }) => {
 
     return (
         <React.Fragment>
-            <span style={{ color: "green" }}>{"\"" + element + "\""}</span>
-            <span>: <button onClick={toggleView}>{icon}</button> </span>
+            <span className={css.key}>{"\"" + element + "\""}</span>
+            <span>: {isObject && <button onClick={toggleView}>{icon}</button>}</span>
             {!isDisplayed && <span>{displayShortcutObjectArray(value)}</span>}
-            <span ref={objectRef}>{value}</span>
+            <span className={className} ref={objectRef}>{value}</span>
         </React.Fragment>
     );
 }
