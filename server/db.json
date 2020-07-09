@@ -1,0 +1,18 @@
+{
+    "users": []
+}
+
+// POST /register
+// {
+//   "email": "olivier@mail.com",
+//   "password": "bestPassw0rd",
+//   "firstname": "Olivier",
+//   "lastname": "Monge",
+//   "age": 32
+// }
+
+// POST /login
+// {
+//   "email": "olivier@mail.com",
+//   "password": "bestPassw0rd"
+// }
