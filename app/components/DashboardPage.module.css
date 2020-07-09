@@ -1,5 +1,5 @@
 .string {
-    color: purple;
+    color: rgb(167, 5, 216);
 }
 
 .number {
@@ -10,12 +10,12 @@
     color: #ff00ff;
 }
 
-.array {
-    color: orange;
+.array, .object, .separator {
+    color: black;
 }
 
-.object {
-    color: #159A;
+.separator {
+    display: inline;
 }
 
 .key {
