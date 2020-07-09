@@ -32,15 +32,25 @@ const JsonNode = ({ value, element, index, length, className, isObject, valueTyp
         }
     }
 
+    const checkObjectOrArrayEmpty = (value) => {
+        switch (value) {
+            case "[]":
+            case "{}":
+                return false;
+            default:
+                return true;
+        }
+    }
+
     return (
         <React.Fragment>
             <span className={css.key}>{"\"" + element + "\""}</span>
-            <span className={css.separator}>: {value !== "{}" && isObject && <button onClick={toggleView}>{icon}</button>} </span>
+            <span className={css.separator}>: {checkObjectOrArrayEmpty(value) && isObject && <button onClick={toggleView}>{icon}</button>} </span>
             {!isDisplayed && <span className={css.array}>{displayShortcutObjectArray(valueType)}</span>}
             <span className={className} ref={objectRef}>
                 {valueType === "boolean" ? "" + value : value}
             </span>
-            {index !== length - 1 ? <span className={css.separator, css.comma}>,</span> : null}
+            {index !== length - 1 ? <span className={css.separator}>,</span> : null}
         </React.Fragment>
     );
 }

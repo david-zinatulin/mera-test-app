@@ -1,5 +1,5 @@
 const data = {
-  boolean: true,
+  isReadable: true,
   title: "example glossary",
   GlossDiv: {
     title: "S",
@@ -15,7 +15,9 @@ const data = {
       }
     }
   },
-  file: {}
+  file: {},
+  tags: [],
+  author: null,
 }
 
 /**

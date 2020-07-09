@@ -26,7 +26,7 @@ const DisplayObject = ({ data }) => {
                 return { className: css.boolean, value, isObject: false, type: "boolean" }
             default:
                 if (Array.isArray(value)) {
-                    return { className: css.array, value: <DisplayArray data={value} />, isObject: true, type: "array" }
+                    return { className: css.array, value: (value.length === 0 ? "[]" : <DisplayArray data={value} />), isObject: true, type: "array" }
                 } else if (typeof (value) === 'object') {
                     return { className: css.object, value: (Object.keys(value).length === 0 ? "{}" : <DisplayObject data={value} />), isObject: true, type: "object" }
                 }

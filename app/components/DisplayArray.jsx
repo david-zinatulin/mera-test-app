@@ -1,13 +1,13 @@
 import React from 'react';
 import { element } from 'prop-types';
 
-const DisplayArray = (props) => {
+const DisplayArray = ({ data }) => {
     const prepareArray = (data) => {
-        const array = ['a', 'b'];
+        const array = [...data];
         return array;
     }
 
-    const arrayToDisplay = prepareArray(1);
+    const arrayToDisplay = prepareArray(data);
 
     return (
         <React.Fragment>
