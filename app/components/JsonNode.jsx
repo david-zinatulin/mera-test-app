@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
 import css from "./DashboardPage.module.css";
-import { isObject } from 'lodash';
 
-const JsonNode = ({ value, element, index, length, className, isObject }) => {
+const JsonNode = ({ value, element, index, length, className, isObject, valueType }) => {
     let objectRef = useRef();
 
     const NODE_CLOSED_BUTTON_ICON = "+";
@@ -22,20 +21,26 @@ const JsonNode = ({ value, element, index, length, className, isObject }) => {
         setIsDisplayed(!isDisplayed);
     }
 
-    const displayShortcutObjectArray = (value) => {
-        if (React.isValidElement(value)) {
-            return "[...]";
-        } else if (typeof (value) === 'object') {
-            return "{...}";
+    const displayShortcutObjectArray = (type) => {
+        switch (type) {
+            case "object": {
+                return "{...}";
+            }
+            case "array": {
+                return "[...]";
+            }
         }
     }
 
     return (
         <React.Fragment>
             <span className={css.key}>{"\"" + element + "\""}</span>
-            <span>: {isObject && <button onClick={toggleView}>{icon}</button>}</span>
-            {!isDisplayed && <span>{displayShortcutObjectArray(value)}</span>}
-            <span className={className} ref={objectRef}>{value}</span>
+            <span className={css.separator}>: {value !== "{}" && isObject && <button onClick={toggleView}>{icon}</button>} </span>
+            {!isDisplayed && <span className={css.array}>{displayShortcutObjectArray(valueType)}</span>}
+            <span className={className} ref={objectRef}>
+                {valueType === "boolean" ? "" + value : value}
+            </span>
+            {index !== length - 1 ? <span className={css.separator, css.comma}>,</span> : null}
         </React.Fragment>
     );
 }
