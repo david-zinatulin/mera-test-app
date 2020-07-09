@@ -29,6 +29,7 @@
     "chalk": "^2.3.2",
     "compression": "1.7.2",
     "cross-env": "^5.1.6",
+    "css-loader": "^3.6.0",
     "express": "4.16.3",
     "history": "4.7.2",
     "ip": "1.1.5",
@@ -47,6 +48,7 @@
     "redux-immutable": "4.0.0",
     "redux-saga": "^0.16.2",
     "redux-thunk": "^2.3.0",
+    "style-loader": "^1.2.1",
     "warning": "^4.0.1",
     "whatwg-fetch": "2.0.4"
   },
