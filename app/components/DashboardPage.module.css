@@ -1,0 +1,28 @@
+.string {
+    color: purple;
+}
+
+.number {
+    color: #24D616;
+}
+
+.boolean {
+    color: #ff00ff;
+}
+
+.array {
+    color: orange;
+}
+
+.object {
+    color: #159A;
+}
+
+.key {
+    color: green;
+}
+
+.line {
+    margin-left: 30px;
+    font-size: 1.4rem;
+}

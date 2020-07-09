@@ -1,6 +1,7 @@
 import React from 'react';
 import JsonNode from "./JsonNode";
 import { random } from 'lodash';
+import DisplayArray from './DisplayArray';
 
 const DisplayObject = ({ data }) => {
 
@@ -32,12 +33,13 @@ const DisplayObject = ({ data }) => {
                 return { style: "color: #ff00ff", value }
             default:
                 if (Array.isArray(value)) {
+
                     console.log(value);
-                    // return { style: "color: orange", value: [...<DisplayObject data={checkArrayForCode(value)} />] };
-                    return { style: "color: orange", value: "[ " + value + "]" }
+                    return { style: "color: orange", value: <DisplayArray /> }
+
                 } else if (typeof (value) === 'object') {
                     return {
-                        style: "color: #159A", value: <DisplayObject data={value} />
+                        style: "color: black", value: <DisplayObject data={value} />
                     }
                 }
         }
