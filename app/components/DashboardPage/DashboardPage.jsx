@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import data from "../assets/data";
+import data from "../../assets/data";
 import DisplayObject from "./DisplayObject";
 import css from "./DashboardPage.module.css";
 

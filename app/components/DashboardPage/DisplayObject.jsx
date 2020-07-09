@@ -1,13 +1,9 @@
 import React from 'react';
-import { random } from 'lodash';
-import { prepareJson } from "../js/jsonUtils";
+import { prepareJson } from "../../js/jsonUtils";
+import { generateKey } from "../../js/arrayUtils";
 import css from "./DashboardPage.module.css";
 
 const DisplayObject = ({ data }) => {
-
-    const generateKey = (index) => {
-        return index * 2 + random(1000000);
-    }
 
     const jsonArray = prepareJson(data);
 

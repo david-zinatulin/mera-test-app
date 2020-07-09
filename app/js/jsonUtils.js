@@ -1,8 +1,8 @@
 import React from 'react';
-import DisplayArray from "../components/DisplayArray";
-import DisplayObject from "../components/DisplayObject";
-import JsonNode from "../components/JsonNode";
-import css from "../components/DashboardPage.module.css";
+import DisplayArray from "../components/DashboardPage/DisplayArray";
+import DisplayObject from "../components/DashboardPage/DisplayObject";
+import JsonNode from "../components/DashboardPage/JsonNode";
+import css from "../components/DashboardPage/DashboardPage.module.css";
 
 export const prepareJson = (data) => {
     if (data !== null) {

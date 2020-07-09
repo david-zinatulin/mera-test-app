@@ -22,7 +22,7 @@ const data = {
 /**
  * TODOS:
  * 1) Style button for displaying objects (?)
- * 2)
+ * 2) Proper display of null and undefined
  */
 
 export default data;
