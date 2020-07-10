@@ -1,5 +1,5 @@
 .string {
-    color: rgb(167, 5, 216);
+    color: #a705d8;
 }
 
 .number {
@@ -13,7 +13,7 @@
 .array, 
 .object, 
 .separator {
-    color: black;
+    color: #000000;
 }
 
 .separator {
@@ -21,7 +21,7 @@
 }
 
 .key {
-    color: green;
+    color: #008000;
 }
 
 .line,
@@ -29,8 +29,8 @@
     margin-left: 30px;
 }
 
-.animate {
-    
+.null {
+    color: #FF0000;
 }
 
 .code {
@@ -40,7 +40,7 @@
 .toggleViewButton,
 .toggleViewButton:focus {
     border-radius: 5px;
-    border: 1px black solid;
+    border: 1px #000000 solid;
 }
 
 .toggleViewButton {
