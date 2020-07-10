@@ -73,50 +73,59 @@ const DisplayArray = ({ data }) => {
 const DisplayObject = ({ data }) => {
     const jsonArray = keyValuePairsArray(data);
 
-    return jsonArray.map((elem, index) => {
-        const key = generateKey(index);
-        const base = (
-            <div key={key} className={css.line}>
-                {elem}
-            </div>
-        );
-        const array = [];
-        if (jsonArray.length > 1) {
-            const bracketKey = generateKey(index);
-            if (index === 0) {
-                array.push(
-                    <div className={css.separator} key={bracketKey}>
-                        {'{'}
-                    </div>,
-                );
-                array.push(base);
-                return array;
-            }
-            if (index === jsonArray.length - 1) {
-                array.push(base);
-                array.push(
-                    <div className={css.separator} key={bracketKey}>
-                        {'}'}
-                    </div>,
-                );
-                return array;
-            }
-        } else {
-            array.push(
-                <div className={css.separator} key={generateKey(index)}>
-                    {'{'}
-                </div>,
-            );
-            array.push(base);
-            array.push(
-                <div className={css.separator} key={generateKey(index)}>
-                    {'}'}
-                </div>,
-            );
-            return array;
-        }
-        return base;
-    });
+    // return jsonArray.map((elem, index) => {
+    //     const key = generateKey(index);
+    //     const base = (
+    //         <div key={key} className={css.line}>
+    //             {elem}
+    //         </div>
+    //     );
+    //     const array = [];
+    //     if (jsonArray.length > 1) {
+    //         const bracketKey = generateKey(index);
+    //         if (index === 0) {
+    //             array.push(
+    //                 <div className={css.separator} key={bracketKey}>
+    //                     {'{'}
+    //                 </div>,
+    //             );
+    //             array.push(base);
+    //             return array;
+    //         }
+    //         if (index === jsonArray.length - 1) {
+    //             array.push(base);
+    //             array.push(
+    //                 <div className={css.separator} key={bracketKey}>
+    //                     {'}'}
+    //                 </div>,
+    //             );
+    //             return array;
+    //         }
+    //     } else {
+    //         array.push(
+    //             <div className={css.separator} key={generateKey(index)}>
+    //                 {'{'}
+    //             </div>,
+    //         );
+    //         array.push(base);
+    //         array.push(
+    //             <div className={css.separator} key={generateKey(index)}>
+    //                 {'}'}
+    //             </div>,
+    //         );
+    //         return array;
+    //     }
+    //     return base;
+    // });
+    return (
+        <React.Fragment>
+            <div className={css.separator}>{"{"}</div>
+            {jsonArray.map((element, index) => {
+                return <div key={generateKey(index)} className={css.line}>{element}</div>
+            })}
+            <div className={css.separator}>{"}"}</div>
+        </React.Fragment>
+    )
 };
 
 export default DisplayObject;
