@@ -1,24 +1,27 @@
 const data = {
     isReadable: true,
-    title: "example glossary",
+    title: 'example glossary',
     GlossDiv: {
-        title: "S",
+        title: 'S',
         GlossList: {
             GlossEntry: {
-                ID: "SGML",
-                SortAs: "SGML",
+                ID: 'SGML',
+                SortAs: 'SGML',
                 GlossDef: {
-                    para: "A meta-markup language, used to create markup languages such as DocBook.",
-                    "GlossSeeAlso": ["GML", "XML"]
+                    para: 'A meta-markup language, used to create markup languages such as DocBook.',
+                    GlossSeeAlso: ['GML', 'XML'],
                 },
-                GlossSee: "markup"
-            }
-        }
+                GlossSee: 'markup',
+            },
+        },
     },
     example: null,
     file: {},
-    tags: [{ fire: "1", pushka: { name: "easy" } }, { fire: "2", pushka: true }]
-}
+    tags: [
+        { fire: '1', pushka: { name: 'easy' } },
+        { fire: '2', pushka: true },
+    ],
+};
 
 /**
  * TODOS:
