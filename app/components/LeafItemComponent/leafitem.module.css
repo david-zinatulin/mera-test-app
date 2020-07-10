@@ -1,0 +1,14 @@
+.leafContainer {
+    display: flex;
+    margin-left: 20px;
+}
+.leafName {
+    font-size: 16px;
+    font-weight: 600;
+    color: purple;
+}
+.leafValue {
+    font-size: 16px;
+    color: yellowgreen;
+    font-weight: 400;
+}

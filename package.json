@@ -34,7 +34,7 @@
     "history": "4.7.2",
     "ip": "1.1.5",
     "lodash": "^4.17.11",
-    "minimist": "1.2.0",
+    "minimist": "^1.2.5",
     "open-iconic": "^1.1.1",
     "prop-types": "15.6.1",
     "react": "^16.4.0",
