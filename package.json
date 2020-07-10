@@ -19,8 +19,8 @@
     "start:production": "npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "clean": "npm run build:clean",
-    "lint": "eslint --ext .js,.jsx ./lib ./src ./*.js ",
-    "prettier": "prettier --write ./{lib,src}/**/*.{js,jsx,json}"
+    "lint": "eslint --ext .js,.jsx ./app/**/*",
+    "prettier": "prettier --write ./app/**/*"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
