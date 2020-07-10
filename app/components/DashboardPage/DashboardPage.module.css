@@ -10,7 +10,9 @@
     color: #ff00ff;
 }
 
-.array, .object, .separator {
+.array, 
+.object, 
+.separator {
     color: black;
 }
 
@@ -22,10 +24,26 @@
     color: green;
 }
 
-.line {
+.line,
+.arrayElement {
     margin-left: 30px;
+}
+
+.animate {
+    
 }
 
 .code {
     font-size: 1.4rem;
+}
+
+.toggleViewButton,
+.toggleViewButton:focus {
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.toggleViewButton {
+    width: 20px;
+    height: 20px;
 }
