@@ -1,5 +1,5 @@
-import { random } from "lodash";
+import { random } from 'lodash';
 
-export const generateKey = (index) => {
+export const generateKey = index => {
     return index * 2 + random(1000000);
-}
+};
