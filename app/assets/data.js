@@ -16,7 +16,7 @@ const data = {
         }
     },
     file: {},
-    tags: [{ fire: "1", pushka: false }, { fire: "2", pushka: true }]
+    tags: [{ fire: "1", pushka: { name: "easy" } }, { fire: "2", pushka: true }]
 }
 
 /**
