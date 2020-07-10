@@ -1,16 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
-const NotFoundPage = ({ title }) => (
-    <article>
-        <Helmet>
-            <title>{title}</title>
-            <span>sfsdf</span>
-            <span>sfsdf</span>
-            <span>sdfsdfs</span>
-        </Helmet>
-        <div>404</div>
-    </article>
-);
+import style from './NotFoundPage.css'
+const NotFoundPage = props => (
+  <article>
+    <Helmet>
+      <title>{props.title}</title>
+    </Helmet>
+    <div className={style.notFound}>
+      404
+    </div>
+  </article>
+)
 
 export default NotFoundPage;
