@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "NotoSans Regular";
-    src: url("../assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf");
+    font-family: 'NotoSans Regular';
+    src: url('../assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf');
 }
 
 .app1 {
     padding: 10px 20px;
 }
 p {
-    font-family: "NotoSans Regular";
+    font-family: 'NotoSans Regular';
     margin: 5px 0;
 }
