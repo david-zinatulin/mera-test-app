@@ -15,14 +15,14 @@ const data = {
             }
         }
     },
+    example: null,
     file: {},
     tags: [{ fire: "1", pushka: { name: "easy" } }, { fire: "2", pushka: true }]
 }
 
 /**
  * TODOS:
- * 1) Style button for displaying objects (?)
- * 2) Proper display of null and undefined
+ * 1) Style button for displaying objects
  */
 
 export default data;

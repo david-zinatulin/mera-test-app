@@ -27,8 +27,8 @@ const checkValueForStyle = (value) => {
         default:
             if (Array.isArray(value)) {
                 return { className: css.array, value: (value.length === 0 ? "[]" : <DisplayArray data={value} />), isObject: true, type: "array" }
-            } else if (typeof (value) === 'object') {
-                return { className: css.object, value: (Object.keys(value).length === 0 ? "{}" : <DisplayObject data={value} />), isObject: true, type: "object" }
             }
+            if (value === null) return { className: css.null, value: "" + null, isObject: false, type: "null" }
+            return { className: css.object, value: (Object.keys(value).length === 0 ? "{}" : <DisplayObject data={value} />), isObject: true, type: "object" }
     }
 }
