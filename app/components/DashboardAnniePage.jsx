@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../assets/data';
-import LeafItem from './LeafItemComponent/LeafItem';
+import LeafItem from './LeafItemComponent/LeafItem.jsx';
 import s from './DashboardAnniePage.module.css';
 
 const DashboardAnniePage = () => {
