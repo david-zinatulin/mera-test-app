@@ -1,7 +1,7 @@
 import React from 'react';
 import { generateKey } from '../../js/arrayUtils';
 import css from './DashboardPage.module.css';
-import JsonNode from './JsonNode';
+import KeyValuePair from './KeyValuePair';
 
 const checkValueForStyle = value => {
     switch (typeof value) {
@@ -30,14 +30,14 @@ const checkValueForStyle = value => {
     }
 };
 
-const prepareJson = data => {
+const keyValuePairsArray = data => {
     if (data === null) return null;
     const dataKeys = Object.keys(data);
     const dataValues = Object.values(data);
     const newArray = dataKeys.map((element, index) => {
         const { className, value, isObject, type } = checkValueForStyle(dataValues[index]);
         return (
-            <JsonNode
+            <KeyValuePair
                 key={generateKey(index)}
                 className={className}
                 value={value}
@@ -53,7 +53,7 @@ const prepareJson = data => {
 };
 
 const DisplayArray = ({ data }) => {
-    const arrayToDisplay = prepareJson(data);
+    const arrayToDisplay = keyValuePairsArray(data);
 
     return (
         <React.Fragment>
@@ -71,7 +71,7 @@ const DisplayArray = ({ data }) => {
 };
 
 const DisplayObject = ({ data }) => {
-    const jsonArray = prepareJson(data);
+    const jsonArray = keyValuePairsArray(data);
 
     return jsonArray.map((elem, index) => {
         const key = generateKey(index);
