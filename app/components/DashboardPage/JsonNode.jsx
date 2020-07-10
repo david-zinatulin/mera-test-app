@@ -45,8 +45,11 @@ const JsonNode = ({ value, element, index, length, className, isObject, valueTyp
     return (
         <React.Fragment>
             <span className={css.key}>{"\"" + element + "\""}</span>
-            <span className={css.separator}>: {checkObjectOrArrayEmpty(value) && isObject && <button className={css.toggleViewButton} onClick={toggleView}>{icon}</button>} </span>
-            {!isDisplayed && <span className={css.array}>{displayShortcutObjectArray(valueType)}</span>}
+            <span className={css.separator}>
+                : {checkObjectOrArrayEmpty(value) && isObject && <button className={css.toggleViewButton} onClick={toggleView}>{icon}</button>}
+            </span>
+            <span> </span>
+            {!isDisplayed && <span className={valueType === "array" ? css.array : css.object}>{displayShortcutObjectArray(valueType)}</span>}
             <span className={className} ref={objectRef}>
                 {valueType === "boolean" ? "" + value : value}
             </span>

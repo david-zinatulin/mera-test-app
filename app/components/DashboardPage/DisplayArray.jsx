@@ -1,5 +1,7 @@
 import React from 'react';
 import { prepareJson } from "../../js/jsonUtils";
+import css from "./DashboardPage.module.css";
+import { generateKey } from '../../js/arrayUtils';
 
 const DisplayArray = ({ data }) => {
 
@@ -9,11 +11,7 @@ const DisplayArray = ({ data }) => {
         <React.Fragment>
             <span>[ </span>
             {arrayToDisplay.map((element, index) => {
-                if (index !== arrayToDisplay.length - 1) {
-                    return <div style={{ marginLeft: 30 + "px" }}>{element}</div>
-                } else {
-                    return <div style={{ marginLeft: 30 + "px" }}>{element}</div>
-                }
+                return <div key={generateKey(index)} className={css.arrayElement}>{element}</div>
             })}
             <span> ]</span>
         </React.Fragment>
