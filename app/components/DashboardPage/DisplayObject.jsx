@@ -8,8 +8,8 @@ const DisplayObject = ({ data }) => {
     const jsonArray = prepareJson(data);
 
     return jsonArray.map((elem, index) => {
-        const base = <div key={key} className={css.line}>{elem}</div>;
         let key = generateKey(index);
+        const base = <div key={key} className={css.line}>{elem}</div>;
         let array = [];
         if (jsonArray.length > 1) {
             let bracketKey = generateKey(index);
