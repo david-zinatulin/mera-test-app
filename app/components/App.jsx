@@ -13,19 +13,11 @@ const App = () => (
     <Route
       exact path="/dashboard" render={
         () => (<DashboardPage title="Dashboard" />)
-<<<<<<< master
-      } />
-    <Route
-      exact path="" render={
-        () => (<NotFoundPage title="Page not found" />)
-      } />
-=======
       }/>
       <Route
       exact path="" render={
         () => (<LoginPage title="Login" />)
       }/>    
->>>>>>> Login html and css
   </Switch>
 );
 

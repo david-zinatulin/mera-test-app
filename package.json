@@ -27,7 +27,6 @@
     "lint:eslint": "eslint --ignore-path .gitignore",
     "eslint:fix": "eslint -- . --ignore-path .gitignore --fix",
     "lint:js": "npm run lint:eslint -- . "    
->>>>>>> Login html and css
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
@@ -107,12 +106,6 @@
     "webpack-dev-middleware": "^3.1.3",
     "webpack-hot-middleware": "^2.22.2"
   },
-<<<<<<< master
-  "eslintConfig": {
-    "extends": "./eslint.config.js"
-  }
-=======
   "description": "``` $ yarn ```",
   "main": "index.js"
->>>>>>> Login html and css
 }
