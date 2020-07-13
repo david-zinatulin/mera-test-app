@@ -19,10 +19,15 @@
     "start:production": "npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "clean": "npm run build:clean",
+<<<<<<< HEAD
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "eslint:fix": "eslint -- . --ignore-path .gitignore --fix",
     "lint:js": "npm run lint:eslint -- . "    
+=======
+    "lint": "eslint --ext .js,.jsx ./app/**/*",
+    "prettier": "prettier --write ./app/**/*"  
+>>>>>>> auth
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
@@ -34,8 +39,11 @@
     "faker": "^4.1.0",
     "history": "4.7.2",
     "ip": "1.1.5",
+<<<<<<< HEAD
     "json-server": "^0.16.1",
     "json-server-auth": "^2.0.2",
+=======
+>>>>>>> auth
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "minimist": "1.2.0",
