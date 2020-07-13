@@ -19,14 +19,8 @@
     "start:production": "npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "clean": "npm run build:clean",
-<<<<<<< master
     "lint": "eslint --ext .js,.jsx ./app/**/*",
-    "prettier": "prettier --write ./app/**/*"
-=======
-    "lint": "npm run lint:js",
-    "lint:eslint": "eslint --ignore-path .gitignore",
-    "eslint:fix": "eslint -- . --ignore-path .gitignore --fix",
-    "lint:js": "npm run lint:eslint -- . "    
+    "prettier": "prettier --write ./app/**/*"  
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
