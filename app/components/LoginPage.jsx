@@ -6,7 +6,7 @@ import style from './LoginPage.css';
 function LoginPage (props) {
 
   const[state,setState]=useState({
-    username:"",
+    email:"",
     password:""
   });
 
@@ -19,7 +19,7 @@ function LoginPage (props) {
   }
 
 const handleSubmit=()=>{
-  alert('Email address is ' + state.username + ' Password is ' + state.password);            
+  alert('Email address is ' + state.email + ' Password is ' + state.password);            
 }
 
 return(
@@ -30,7 +30,7 @@ return(
     <div className={style.loginpage}>
     <div className={style.form}>
     <form className={style.loginform}>
-      <input className={style.forminput} value={state.username} onChange={handleChange} id="username" type="text" placeholder="username"/>
+      <input className={style.forminput} value={state.email} onChange={handleChange} id="email" type="text" placeholder="email"/>
       <input className={style.forminput} value={state.password} onChange={handleChange} id="password" type="password" placeholder="password"/>
       <button className={style.formbutton} onClick={handleSubmit}>login</button>
       <p className={style.message}>Not registered? <a href="#">Create an account</a></p>
