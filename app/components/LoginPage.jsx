@@ -19,7 +19,18 @@ function LoginPage (props) {
   }
 
 const handleSubmit=()=>{
-  alert('Email address is ' + state.email + ' Password is ' + state.password);            
+  alert('Email address is ' + state.email + ' Password is ' + state.password);//Просто проверка работоспособности кнопки  
+  let obj={};
+  obj.email=state.email;
+  obj.password=state.password;  
+  fetch('http://localhost/8080/login',
+  {
+    header: {
+      "Content-Type":"application/json"
+    },
+    method: 'POST',
+    body: JSON.stringify({obj})
+  })
 }
 
 return(
