@@ -19,30 +19,26 @@ function LoginPage (props) {
     }))
   }
 
-const handleSubmit=()=>{
+const handleSubmit= () => {
+  console.warn(state.email+state.password);
   let obj={};
   obj.email=state.email;
-  obj.password=state.password;  
-  fetch('http://localhost/3000/login',
+  obj.password=state.password;
+  let user = {
+    email: 'qwerty@gmail.com',
+    password: 'qwerty007'
+  };
+  console.log(JSON.stringify(user))
+  console.log(obj)  
+  fetch('http://localhost:8080/login',
   {
+    method: 'POST',
     header: {
       'Accept': 'application/json',
-      "Content-Type":"application/json"
+      "Content-Type":"application/json;charset=utf-8"
     },
-    method: 'POST',
-    body: JSON.stringify({obj})
+    body: JSON.stringify(user)
   })
-  .then((response)=>{
-    response.json().then((result)=>{
-      console.warn("result",result);
-      alert("result"+result);
-      localStorage.setItem('login',JSON.stringify({
-        login:true,
-        token:result.token
-      }))
-      setState({login:true})
-    })
-})
 }
 
 return(
@@ -54,11 +50,11 @@ return(
       !state.login?
     <div className={style.loginpage}>
     <div className={style.form}>
-    <form className={style.loginform}>
+    
       <input className={style.forminput} value={state.email} onChange={handleChange} id="email" type="text" placeholder="email"/>
       <input className={style.forminput} value={state.password} onChange={handleChange} id="password" type="password" placeholder="password"/>
       <button className={style.formbutton} onClick={handleSubmit}>login</button>
-    </form>
+    
     </div>
     </div>
     :

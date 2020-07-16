@@ -24,6 +24,11 @@
       "email": "gdsfgf@gmail.com",
       "password": "$2a$10$ngNrRBENg391e4CrR5gp9OKH3g7Mv8diOl4K6yVas/Zl9l0OsD85K",
       "id": 5
+    },
+    {
+      "email": "qwerty@gmail.com",
+      "password": "$2a$10$y/aaEtQ/40/.VfiigfwGPOH.xhsdT/zp28P7K5tz//rMiUJx90e3.",
+      "id": 6
     }
   ]
 }
