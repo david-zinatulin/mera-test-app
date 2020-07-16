@@ -1,4 +1,5 @@
 import React, {Component, useState} from 'react';
+import queryString from 'query-string';
 import {connect} from 'react-redux';
 import { Helmet } from 'react-helmet';
 import style from './LoginPage.css';
@@ -25,12 +26,12 @@ const handleSubmit= () => {
   obj.email=state.email;
   obj.password=state.password;
   let user = {
-    email: 'qwerty@gmail.com',
-    password: 'qwerty007'
+    email: 'davidzinatulin@gmail.com',
+    password: 'TestPass123'
   };
   console.log(JSON.stringify(user))
   console.log(obj)  
-  fetch('http://localhost:8080/login',
+  fetch(`https://api.peerberry.com/v1/investor/login`,
   {
     method: 'POST',
     header: {
