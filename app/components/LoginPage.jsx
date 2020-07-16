@@ -34,6 +34,9 @@ const handleSubmit= () => {
   fetch(`https://api.peerberry.com/v1/investor/login`,
   {
     method: 'POST',
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
     body: queryString.stringify(user)
   })
 }
