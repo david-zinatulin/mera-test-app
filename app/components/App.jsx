@@ -16,7 +16,7 @@ const App = () => (
       }/>
       <Route
       exact path="" render={
-        () => (<LoginPage title="Login" />)
+        () => (<NotFoundPage title="NotFoundPage" />)
       }/>    
   </Switch>
 );

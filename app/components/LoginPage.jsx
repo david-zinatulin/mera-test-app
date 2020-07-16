@@ -7,7 +7,8 @@ function LoginPage (props) {
 
   const[state,setState]=useState({
     email:"",
-    password:""
+    password:"",
+    login:false
   });
 
   const handleChange = (e) => {
@@ -19,18 +20,29 @@ function LoginPage (props) {
   }
 
 const handleSubmit=()=>{
-  alert('Email address is ' + state.email + ' Password is ' + state.password);//Просто проверка работоспособности кнопки  
   let obj={};
   obj.email=state.email;
   obj.password=state.password;  
-  fetch('http://localhost/8080/login',
+  fetch('http://localhost/3000/login',
   {
     header: {
+      'Accept': 'application/json',
       "Content-Type":"application/json"
     },
     method: 'POST',
     body: JSON.stringify({obj})
   })
+  .then((response)=>{
+    response.json().then((result)=>{
+      console.warn("result",result);
+      alert("result"+result);
+      localStorage.setItem('login',JSON.stringify({
+        login:true,
+        token:result.token
+      }))
+      setState({login:true})
+    })
+})
 }
 
 return(
@@ -38,16 +50,20 @@ return(
     <Helmet>
       <title>{props.title}</title>
     </Helmet>
+    {
+      !state.login?
     <div className={style.loginpage}>
     <div className={style.form}>
     <form className={style.loginform}>
       <input className={style.forminput} value={state.email} onChange={handleChange} id="email" type="text" placeholder="email"/>
       <input className={style.forminput} value={state.password} onChange={handleChange} id="password" type="password" placeholder="password"/>
       <button className={style.formbutton} onClick={handleSubmit}>login</button>
-      <p className={style.message}>Not registered? <a href="#">Create an account</a></p>
     </form>
     </div>
     </div>
+    :
+    <div>logined</div>
+};
   </article>
   )
 }
