@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import queryString from 'query-string';
 import {connect} from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -9,8 +9,22 @@ function LoginPage (props) {
   const[state,setState]=useState({
     email:"",
     password:"",
-    login:false
+    login:false,
+    token:null,
+    store:null
   });
+
+  useEffect(()=>{
+    storeCollector()
+  },[]);
+
+  const storeCollector = () =>
+  {
+    let store=JSON.parse(localStorage.getItem("login"));
+    if(store && store.login){
+      setState({login:true,store:store})
+    }
+  }
 
   const handleChange = (e) => {
     const {id , value} = e.target   
@@ -37,8 +51,18 @@ const handleSubmit= () => {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: queryString.stringify(user)
+    body: queryString.stringify(user)    
   })
+  .then((response)=>{
+    response.json().then((result)=>{      
+      console.warn(result.access_token)
+      localStorage.setItem("login",JSON.stringify({
+        token:result.access_token,
+        login:true
+      }))
+      storeCollector()
+    });
+  })  
 }
 
 return(
