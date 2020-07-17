@@ -1,4 +1,5 @@
 import React, {Component, useState, useEffect} from 'react';
+import { Link, Switch } from 'react-router-dom';
 import queryString from 'query-string';
 import {connect} from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -82,8 +83,21 @@ return(
     </div>
     </div>
     :
-    <div>logined</div>
-};
+    <div>logined as
+      <div>
+    <Link to="/dashboard"><button className={style.button} type="button">
+    To dashboard
+    </button>
+    </Link>
+  </div>
+  <div>
+    <Link to="/"><button className={style.button} type="button">
+    To not found page?!
+    </button>
+    </Link>
+  </div>
+  </div>
+}
   </article>
   )
 }

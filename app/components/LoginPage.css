@@ -24,6 +24,21 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+.button {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #FFFFFF;
+  margin: 5px;
+  width: 200px;
+  border: 0;
+  padding: 15px;
+  color: #4CAF50;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
 .formbutton {
   font-family: sans-serif;
   text-transform: uppercase;
