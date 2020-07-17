@@ -282,8 +282,8 @@ const testData = [
             }
         ],
         "greeting": "Hello, Herminia! You have 5 unread messages.",
-        "favoriteFruit": "banana"
+        "favoriteFruit": "strawberry"
     }
 ];
 
-export default testData
+export default testData;
