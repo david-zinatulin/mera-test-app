@@ -1,20 +1,1363 @@
 const data = {
-  title: "example glossary",
-  GlossDiv: {
-    title: "S",
-    GlossList: {
-      GlossEntry: {
-        ID: "SGML",
-        SortAs: "SGML",
-        GlossDef: {
-          para: "A meta-markup language, used to create markup languages such as DocBook.",
-          "GlossSeeAlso": ["GML", "XML"]
+    auroraPostPage: {
+        isAuroraPostPageEnabled: false,
+    },
+    config: {
+        nodeEnv: 'production',
+        version: 'master-20200709-215749-c51c801511',
+        productName: 'Medium',
+        publicUrl: 'https://cdn-client.medium.com/lite',
+        authDomain: 'medium.com',
+        authGoogleClientId: '216296035834-k1k6qe060s2tp2a2jam4ljdcms00sttg.apps.googleusercontent.com',
+        favicon: 'production',
+        glyphUrl: 'https://glyph.medium.com',
+        branchKey: 'key_live_ofxXr2qTrrU9NqURK8ZwEhknBxiI6KBm',
+        lightStep: {
+            name: 'lite-web',
+            host: 'lightstep.medium.systems',
+            token: 'ce5be895bef60919541332990ac9fef2',
+            appVersion: 'master-20200709-215749-c51c801511',
         },
-        GlossSee: "markup"
-      }
-    }
-  }
-}
-
+        algolia: {
+            appId: 'MQ57UUUQZ2',
+            apiKeySearch: '394474ced050e3911ae2249ecc774921',
+            indexPrefix: 'medium_',
+            host: '-dsn.algolia.net',
+        },
+        recaptchaKey: '6Lfc37IUAAAAAKGGtC6rLS13R1Hrw_BqADfS1LRk',
+        recaptcha3Key: '6Lf8R9wUAAAAABMI_85Wb8melS7Zj6ziuf99Yot5',
+        datadog: {
+            clientToken: 'pub853ea8d17ad6821d9f8f11861d23dfed',
+            context: {
+                deployment: {
+                    target: 'production',
+                    tag: 'master-20200709-215749-c51c801511',
+                    commit: 'c51c80151189ca4cba9c2bdcfc275a46223dce49',
+                },
+            },
+            datacenter: 'us',
+        },
+        isAmp: false,
+        googleAnalyticsCode: 'UA-24232453-2',
+        signInWallCustomDomainCollectionIds: [
+            '3a8144eabfe3',
+            '336d898217ee',
+            '61061eb0c96b',
+            '138adf9c44c',
+            '819cc2aaeee0',
+        ],
+        mediumOwnedAndOperatedCollectionIds: [
+            '544c7006046e',
+            'bcc38c8f6edf',
+            '444d13b52878',
+            '8d6b8a439e32',
+            '92d2092dc598',
+            '1285ba81cada',
+            'cb8577c9149e',
+            '8ccfed20cbb2',
+            'ae2a65f35510',
+            '3f6ecf56618',
+            '7b6769f2748b',
+            'fc8964313712',
+            'ef8e90590e66',
+            '191186aaafa0',
+            'd944778ce714',
+            'bdc4052bbdba',
+            '88d9857e584e',
+            '9dc80918cc93',
+        ],
+        tierOneDomains: [
+            'medium.com',
+            'thebolditalic.com',
+            'arcdigital.media',
+            'towardsdatascience.com',
+            'uxdesign.cc',
+            'codeburst.io',
+            'psiloveyou.xyz',
+            'writingcooperative.com',
+            'entrepreneurshandbook.co',
+            'prototypr.io',
+            'betterhumans.coach.me',
+            'theascent.pub',
+        ],
+        defaultImages: {
+            avatar: {
+                imageId: '1*dmbNkD5D-u45r44go_cf0g.png',
+                height: 150,
+                width: 150,
+            },
+            orgLogo: {
+                imageId: '1*OMF3fSqH8t4xBJ9-6oZDZw.png',
+                height: 106,
+                width: 545,
+            },
+            postLogo: {
+                imageId: '1*3sela1OADrJr7dJk_CXaEQ.png',
+                height: 810,
+                width: 1440,
+            },
+            postPreviewImage: {
+                imageId: '1*hn4v1tCaJy7cWMyb0bpNpQ.png',
+                height: 386,
+                width: 579,
+            },
+        },
+        performanceTags: [],
+        collectionStructuredData: {
+            '8d6b8a439e32': {
+                name: 'Elemental',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://cdn-images-1.medium.com/max/980/1*9ygdqoKprhwuTVKUM0DLPA@2x.png',
+                        'width': 980,
+                        'height': 159,
+                    },
+                },
+            },
+            '3f6ecf56618': {
+                name: 'Forge',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://cdn-images-1.medium.com/max/596/1*uULpIlImcO5TDuBZ6lm7Lg@2x.png',
+                        'width': 596,
+                        'height': 183,
+                    },
+                },
+            },
+            'ae2a65f35510': {
+                name: 'GEN',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://miro.medium.com/max/264/1*RdVZMdvfV3YiZTw6mX7yWA.png',
+                        'width': 264,
+                        'height': 140,
+                    },
+                },
+            },
+            '88d9857e584e': {
+                name: 'LEVEL',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://miro.medium.com/max/540/1*JqYMhNX6KNNb2UlqGqO2WQ.png',
+                        'width': 540,
+                        'height': 108,
+                    },
+                },
+            },
+            '7b6769f2748b': {
+                name: 'Marker',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://cdn-images-1.medium.com/max/383/1*haCUs0wF6TgOOvfoY-jEoQ@2x.png',
+                        'width': 383,
+                        'height': 92,
+                    },
+                },
+            },
+            '444d13b52878': {
+                name: 'OneZero',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://miro.medium.com/max/540/1*cw32fIqCbRWzwJaoQw6BUg.png',
+                        'width': 540,
+                        'height': 123,
+                    },
+                },
+            },
+            '8ccfed20cbb2': {
+                name: 'Zora',
+                data: {
+                    '@type': 'NewsMediaOrganization',
+                    'ethicsPolicy': 'https://help.medium.com/hc/en-us/articles/360043290473',
+                    'logo': {
+                        '@type': 'ImageObject',
+                        'url': 'https://miro.medium.com/max/540/1*tZUQqRcCCZDXjjiZ4bDvgQ.png',
+                        'width': 540,
+                        'height': 106,
+                    },
+                },
+            },
+        },
+        embeddedPostIds: {
+            coronavirus: 'cd3010f9d81f',
+        },
+        sharedCdcMessaging: {
+            COVID_APPLICABLE_TAG_SLUGS: [
+                'pandemic',
+                'epidemic',
+                'coronavirus',
+                'covid19',
+                'co-vid-19',
+                'containment',
+                'self-care',
+                'flatten-the-curve',
+                'public-health',
+                'virus',
+                'public-health-crisis',
+                'quarantine',
+                'self-quarantine',
+                'zika',
+                'corona',
+                'disease-prevention',
+                'wuhan',
+                'chinavirus',
+                'outbreak',
+                'influenza',
+                'socialdistancing',
+                'social-distance',
+                'flu',
+                'vaccines',
+                'healthcare',
+                'medicine',
+                'conspiracy-theories',
+                'conspiracy',
+                'virality',
+                'epidemia',
+                'pandemia',
+                'salud',
+                'corona-e-virus',
+                'coronavirus-covid19',
+                'covid-19',
+                'covid-19-symptoms',
+                'covid-19-crisis',
+                'covid-19-testing',
+                'covid-19-treatment',
+                'coronavirus-update',
+                'coronavirus-diaries',
+            ],
+            COVID_APPLICABLE_TOPIC_NAMES: ['coronavirus'],
+            COVID_APPLICABLE_TOPIC_NAMES_FOR_TOPIC_PAGE: ['coronavirus', 'health'],
+            COVID_MESSAGES: {
+                tierA: {
+                    text: 'For more information on the novel coronavirus and Covid-19, visit cdc.gov.',
+                    markups: [
+                        {
+                            start: 66,
+                            end: 73,
+                            href: 'https://www.cdc.gov/coronavirus/2019-nCoV',
+                        },
+                    ],
+                },
+                tierB: {
+                    text:
+                        'Anyone can publish on Medium per our Policies, but we don’t fact-check every story. For more info about the coronavirus, see cdc.gov.',
+                    markups: [
+                        {
+                            start: 37,
+                            end: 45,
+                            href: 'https://help.medium.com/hc/en-us/categories/201931128-Policies-Safety',
+                        },
+                        {
+                            start: 125,
+                            end: 132,
+                            href: 'https://www.cdc.gov/coronavirus/2019-nCoV',
+                        },
+                    ],
+                },
+                paywall: {
+                    text:
+                        'This article has been made free for everyone, thanks to Medium Members. For more information on the novel coronavirus and Covid-19, visit cdc.gov.',
+                    markups: [
+                        {
+                            start: 56,
+                            end: 70,
+                            href: 'https://medium.com/membership',
+                        },
+                        {
+                            start: 138,
+                            end: 145,
+                            href: 'https://www.cdc.gov/coronavirus/2019-nCoV',
+                        },
+                    ],
+                },
+            },
+            COVID_BANNER_POST_ID_OVERRIDE_WHITELIST: ['3b31a67bff4a'],
+        },
+        embedPostRules: [],
+        recircOptions: {
+            v1: {
+                limit: 3,
+            },
+            v2: {
+                limit: 8,
+            },
+        },
+        braintreeClientKey: 'production_zjkj96jm_m56f8fqpf7ngnrd4',
+        paypalClientId: 'AXj1G4fotC2GE8KzWX9mSxCH1wmPE3nJglf4Z2ig_amnhvlMVX87otaq58niAg9iuLktVNF_1WCMnN7v',
+    },
+    debug: {
+        requestId: '44bd6725-78bd-4c1b-88b7-cd9ded58d7bd',
+        edge: '',
+        originalSpanCarrier: {
+            'ot-tracer-spanid': '4b3eb8821ee412bd',
+            'ot-tracer-traceid': '3f3ea1ff4990e256',
+            'ot-tracer-sampled': 'true',
+        },
+        performanceTraceUrl:
+            'https://app.lightstep.com/ce5be895bef60919541332990ac9fef2/trace?span_guid=4faef3d06a29fc93&at_micros=1594397655116500',
+    },
+    session: {
+        user: {
+            id: 'lo_fUNTMn8NX7v2',
+        },
+        xsrf: '',
+        isSpoofed: false,
+    },
+    stats: {
+        itemCount: 0,
+        sending: false,
+        timeout: null,
+        backup: {},
+    },
+    navigation: {
+        branch: {
+            show: true,
+            hasRendered: true,
+            blockedByCTA: false,
+            data: {
+                in_app_browser: 'Null',
+                is_logged_in: false,
+                is_member: false,
+                user_created_at: 'Null',
+                medium_member_at: 'Null',
+                post_topic_name: 'Null',
+                post_topic_slug: 'Null',
+                post_publication_name: 'Bits and Pieces',
+                post_publication_id: '5c2fdf847f4a',
+                layer_cake: 4,
+                num_nonmoc_posts_in_month: 1,
+                num_posts_in_day: 0,
+                num_posts_in_week: 0,
+                num_posts_in_month: 0,
+                post_creator_name: 'Sukhjinder Arora',
+                post_creator_id: 'dd13f34a896d',
+                source: 'Other',
+                following_author: false,
+                following_pub: false,
+                following_topic: false,
+                profile_name: 'Null',
+                profile_photo: 'Null',
+                profile_username: 'Null',
+                page_type: 'Null',
+                meter_state: 'not_metered',
+                $canonical_url: 'https://medium.com/p/b290405adfda',
+                loaded: true,
+            },
+        },
+        hideGoogleOneTap: false,
+        hasRenderedGoogleOneTap: false,
+        hasRenderedAlternateUserBanner: null,
+        currentLocation: 'https://blog.bitsrc.io/hoisting-in-modern-javascript-let-const-and-var-b290405adfda',
+        host: 'blog.bitsrc.io',
+        hostname: 'blog.bitsrc.io',
+        referrer: 'https://www.google.com/',
+        susiModal: {
+            step: null,
+            operation: 'register',
+        },
+        postRead: false,
+        responsesOpen: false,
+    },
+    client: {
+        isBot: false,
+        isCustomDomain: true,
+        isEu: false,
+        isNativeMedium: false,
+        isSafariMobile: false,
+        inAppBrowserName: '',
+        supportsWebp: true,
+    },
+    multiVote: {
+        clapsPerPost: {},
+    },
+    tracing: {
+        tracer: {
+            _ee: {
+                _events: {
+                    options: [
+                        {
+                            context: '[CIRCULAR]',
+                            once: false,
+                        },
+                        {
+                            context: '[CIRCULAR]',
+                            once: false,
+                        },
+                    ],
+                },
+            },
+            _platform: {},
+            _runtimeGUID: '0690f4457d0159d4',
+            _plugins: {
+                log_to_console: {
+                    _enabled: false,
+                    _tracer: '[CIRCULAR]',
+                },
+                instrument_xhr: {
+                    _enabled: true,
+                    _proxyInited: false,
+                    _internalExclusions: [{}, {}],
+                    _tracer: '[CIRCULAR]',
+                },
+                instrument_page_load: {
+                    _inited: true,
+                    _span: null,
+                },
+            },
+            _options: {
+                verbosity: 1,
+                access_token: 'ce5be895bef60919541332990ac9fef2',
+                component_name: 'lite-web',
+                collector_host: 'lightstep.medium.systems',
+                collector_port: 443,
+                collector_path: '',
+                collector_encryption: 'tls',
+                tags: {},
+                max_reporting_interval_millis: 2500,
+                disabled: false,
+                max_span_records: 4096,
+                default_span_tags: {
+                    'component.version': 'master-20200709-215749-c51c801511',
+                },
+                report_timeout_millis: 30000,
+                gzip_json_requests: true,
+                disable_reporting_loop: false,
+                disable_report_on_exit: false,
+                delay_initial_report_millis: 1000,
+                error_throttle_millis: 60000,
+                certificate_verification: true,
+                override_transport: null,
+                silent: false,
+                log_field_key_hard_limit: 256,
+                log_field_value_hard_limit: 1024,
+                log_to_console: false,
+                xhr_instrumentation: false,
+                xhr_url_inclusion_patterns: [{}],
+                xhr_url_exclusion_patterns: [],
+                instrument_page_load: false,
+            },
+            _optionDescs: [
+                {
+                    type: 'int',
+                    min: 0,
+                    max: 9,
+                    defaultValue: 1,
+                    name: 'verbosity',
+                },
+                {
+                    type: 'string',
+                    defaultValue: '',
+                    name: 'access_token',
+                },
+                {
+                    type: 'string',
+                    defaultValue: '',
+                    name: 'component_name',
+                },
+                {
+                    type: 'string',
+                    defaultValue: 'collector.lightstep.com',
+                    name: 'collector_host',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 443,
+                    name: 'collector_port',
+                },
+                {
+                    type: 'string',
+                    defaultValue: '',
+                    name: 'collector_path',
+                },
+                {
+                    type: 'string',
+                    defaultValue: 'tls',
+                    name: 'collector_encryption',
+                },
+                {
+                    type: 'any',
+                    defaultValue: {},
+                    name: 'tags',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 2500,
+                    name: 'max_reporting_interval_millis',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'disabled',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 4096,
+                    name: 'max_span_records',
+                },
+                {
+                    type: 'any',
+                    defaultValue: {},
+                    name: 'default_span_tags',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 30000,
+                    name: 'report_timeout_millis',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: true,
+                    name: 'gzip_json_requests',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'disable_reporting_loop',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'disable_report_on_exit',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 1000,
+                    name: 'delay_initial_report_millis',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 60000,
+                    name: 'error_throttle_millis',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: true,
+                    name: 'certificate_verification',
+                },
+                {
+                    type: 'any',
+                    defaultValue: null,
+                    name: 'override_transport',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'silent',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 256,
+                    name: 'log_field_key_hard_limit',
+                },
+                {
+                    type: 'int',
+                    defaultValue: 1024,
+                    name: 'log_field_value_hard_limit',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'log_to_console',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'xhr_instrumentation',
+                },
+                {
+                    type: 'array',
+                    defaultValue: [{}],
+                    name: 'xhr_url_inclusion_patterns',
+                },
+                {
+                    type: 'array',
+                    defaultValue: [],
+                    name: 'xhr_url_exclusion_patterns',
+                },
+                {
+                    type: 'bool',
+                    defaultValue: false,
+                    name: 'instrument_page_load',
+                },
+            ],
+            _opentracing: {
+                Tags: {
+                    SPAN_KIND: 'span.kind',
+                    SPAN_KIND_RPC_CLIENT: 'client',
+                    SPAN_KIND_RPC_SERVER: 'server',
+                    SPAN_KIND_MESSAGING_PRODUCER: 'producer',
+                    SPAN_KIND_MESSAGING_CONSUMER: 'consumer',
+                    ERROR: 'error',
+                    COMPONENT: 'component',
+                    SAMPLING_PRIORITY: 'sampling.priority',
+                    PEER_SERVICE: 'peer.service',
+                    PEER_HOSTNAME: 'peer.hostname',
+                    PEER_ADDRESS: 'peer.address',
+                    PEER_HOST_IPV4: 'peer.ipv4',
+                    PEER_HOST_IPV6: 'peer.ipv6',
+                    PEER_PORT: 'peer.port',
+                    HTTP_URL: 'http.url',
+                    HTTP_METHOD: 'http.method',
+                    HTTP_STATUS_CODE: 'http.status_code',
+                    MESSAGE_BUS_DESTINATION: 'message_bus.destination',
+                    DB_INSTANCE: 'db.instance',
+                    DB_STATEMENT: 'db.statement',
+                    DB_TYPE: 'db.type',
+                    DB_USER: 'db.user',
+                },
+                FORMAT_BINARY: 'binary',
+                FORMAT_TEXT_MAP: 'text_map',
+                FORMAT_HTTP_HEADERS: 'http_headers',
+                REFERENCE_CHILD_OF: 'child_of',
+                REFERENCE_FOLLOWS_FROM: 'follows_from',
+            },
+            _startMicros: 1594397656540915,
+            _thriftAuth: {
+                access_token: 'ce5be895bef60919541332990ac9fef2',
+            },
+            _thriftRuntime: {
+                guid: '0690f4457d0159d4',
+                start_micros: 1594397656540915,
+                group_name: 'lite-web',
+                attrs: [
+                    {
+                        Key: 'lightstep.tracer_version',
+                        Value: '0.20.8',
+                    },
+                    {
+                        Key: 'lightstep.tracer_platform',
+                        Value: 'browser',
+                    },
+                ],
+            },
+            _transport: {
+                _host: 'lightstep.medium.systems',
+                _port: 443,
+                _path: '',
+                _encryption: 'tls',
+            },
+            _reportingLoopActive: true,
+            _reportYoungestMicros: 1594397656540915,
+            _reportTimer: 11468,
+            _reportErrorStreak: 136,
+            _lastVisibleErrorMillis: 0,
+            _skippedVisibleErrors: 0,
+            _activeRootSpanSet: {},
+            _activeRootSpan: null,
+            _useClockState: true,
+            _clockState: {
+                _samples: [],
+                _currentOffsetMicros: 0,
+                _currentOffsetAge: 8,
+            },
+            _spanRecords: [
+                {
+                    span_guid: '6617e33e3ef35ad9',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.firstContentfulPaint.v2',
+                    join_ids: null,
+                    oldest_micros: 1594397652152000,
+                    youngest_micros: 1594397655290610,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4b3eb8821ee412bd',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '12e40ee9789b1ef0',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.largestContentfulPaint',
+                    join_ids: null,
+                    oldest_micros: 1594397652152000,
+                    youngest_micros: 1594397655334380,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4b3eb8821ee412bd',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '356ad719330513cf',
+                    trace_guid: '50c1e751119dee81',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'client.performance.report',
+                    join_ids: null,
+                    oldest_micros: 1594397656624140,
+                    youngest_micros: 1594397656641505,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'report',
+                            Value: 'fcp',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'span.kind',
+                            Value: 'client',
+                        },
+                        {
+                            Key: 'error',
+                            Value: 'true',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: [
+                        {
+                            timestamp_micros: 1594397656641395,
+                            fields: [
+                                {
+                                    Key: 'error',
+                                    Value: 'TypeError: Failed to fetch',
+                                },
+                            ],
+                            runtime_guid: null,
+                            span_guid: null,
+                            stable_name: null,
+                            message: null,
+                            level: null,
+                            thread_id: null,
+                            filename: null,
+                            line_number: null,
+                            stack_frames: null,
+                            payload_json: null,
+                            error_flag: null,
+                        },
+                    ],
+                },
+                {
+                    span_guid: '74df417512f5de38',
+                    trace_guid: '4a7e8fdc7a6d421d',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'client.performance.report',
+                    join_ids: null,
+                    oldest_micros: 1594397656625335,
+                    youngest_micros: 1594397656641885,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'report',
+                            Value: 'lcp',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'span.kind',
+                            Value: 'client',
+                        },
+                        {
+                            Key: 'error',
+                            Value: 'true',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: [
+                        {
+                            timestamp_micros: 1594397656641875,
+                            fields: [
+                                {
+                                    Key: 'error',
+                                    Value: 'TypeError: Failed to fetch',
+                                },
+                            ],
+                            runtime_guid: null,
+                            span_guid: null,
+                            stable_name: null,
+                            message: null,
+                            level: null,
+                            thread_id: null,
+                            filename: null,
+                            line_number: null,
+                            stack_frames: null,
+                            payload_json: null,
+                            error_flag: null,
+                        },
+                    ],
+                },
+                {
+                    span_guid: '5e6dd907297365c7',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.beforeDomainLookup',
+                    join_ids: null,
+                    oldest_micros: 1594397652152000,
+                    youngest_micros: 1594397654073000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '1f2717315c3c40d4',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.domainLookup',
+                    join_ids: null,
+                    oldest_micros: 1594397654073000,
+                    youngest_micros: 1594397654073000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '01a41f7c58e665f4',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.connect',
+                    join_ids: null,
+                    oldest_micros: 1594397654073000,
+                    youngest_micros: 1594397654073000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '2980a9205add51a8',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.request',
+                    join_ids: null,
+                    oldest_micros: 1594397654076000,
+                    youngest_micros: 1594397654839000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '4c340d800cfaac34',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.response',
+                    join_ids: null,
+                    oldest_micros: 1594397654839000,
+                    youngest_micros: 1594397655145000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '07374cce324512df',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.processing',
+                    join_ids: null,
+                    oldest_micros: 1594397654848000,
+                    youngest_micros: 1594397658081000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '3e9293ea50da62b9',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.firstContentfulPaint',
+                    join_ids: null,
+                    oldest_micros: 1594397652152000,
+                    youngest_micros: 1594397655290610,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '73e8de7531c2f382',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.render',
+                    join_ids: null,
+                    oldest_micros: 1594397655145000,
+                    youngest_micros: 1594397655290610,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '37f350b37de6c3c9',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '37f350b37de6c3c9',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.client',
+                    join_ids: null,
+                    oldest_micros: 1594397654839000,
+                    youngest_micros: 1594397655290610,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4faef3d06a29fc93',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: null,
+                },
+                {
+                    span_guid: '4faef3d06a29fc93',
+                    trace_guid: '3f3ea1ff4990e256',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'timing.navigation',
+                    join_ids: null,
+                    oldest_micros: 1594397652152000,
+                    youngest_micros: 1594397658081000,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'user.logged_in',
+                            Value: 'false',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.route',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'req.glyph_embed',
+                            Value: 'control',
+                        },
+                        {
+                            Key: 'req.is_custom_domain',
+                            Value: 'true',
+                        },
+                        {
+                            Key: 'parent_span_guid',
+                            Value: '4b3eb8821ee412bd',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: [
+                        {
+                            timestamp_micros: 1594397658083695,
+                            fields: [],
+                            runtime_guid: null,
+                            span_guid: null,
+                            stable_name: null,
+                            message: null,
+                            level: null,
+                            thread_id: null,
+                            filename: null,
+                            line_number: null,
+                            stack_frames: null,
+                            payload_json: null,
+                            error_flag: null,
+                        },
+                    ],
+                },
+                {
+                    span_guid: '3506932b6d79d0c5',
+                    trace_guid: '648893cc3ac42c09',
+                    runtime_guid: '0690f4457d0159d4',
+                    span_name: 'client.performance.report',
+                    join_ids: null,
+                    oldest_micros: 1594397658083070,
+                    youngest_micros: 1594397658187935,
+                    attributes: [
+                        {
+                            Key: 'component.version',
+                            Value: 'master-20200709-215749-c51c801511',
+                        },
+                        {
+                            Key: 'report',
+                            Value: 'render',
+                        },
+                        {
+                            Key: 'req.route_name',
+                            Value: 'post',
+                        },
+                        {
+                            Key: 'span.kind',
+                            Value: 'client',
+                        },
+                        {
+                            Key: 'error',
+                            Value: 'true',
+                        },
+                    ],
+                    error_flag: false,
+                    log_records: [
+                        {
+                            timestamp_micros: 1594397658187925,
+                            fields: [
+                                {
+                                    Key: 'error',
+                                    Value: 'TypeError: Failed to fetch',
+                                },
+                            ],
+                            runtime_guid: null,
+                            span_guid: null,
+                            stable_name: null,
+                            message: null,
+                            level: null,
+                            thread_id: null,
+                            filename: null,
+                            line_number: null,
+                            stack_frames: null,
+                            payload_json: null,
+                            error_flag: null,
+                        },
+                    ],
+                },
+            ],
+            _counters: {
+                'internal.errors': 0,
+                'internal.warnings': 136,
+                'spans.dropped': 0,
+                'logs.dropped': 0,
+                'logs.keys.over_limit': 0,
+                'logs.values.over_limit': 0,
+                'reports.errors.send': 136,
+            },
+            _internalLogs: [],
+            _flushIsActive: false,
+        },
+        originalSpan: {
+            _baggage: {},
+            _guid: '4b3eb8821ee412bd',
+            _traceGUID: '3f3ea1ff4990e256',
+        },
+    },
+};
 
 export default data;
